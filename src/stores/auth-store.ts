@@ -26,6 +26,14 @@ export const useAuthStore = create<AuthStore>()(
         if (user) set({ user: { ...user, ...updates } });
       },
     }),
-    { name: 'rullie-auth' }
+    {
+      name: 'rullie-auth',
+      // Intentionally persist nothing: `user` carries real PII (email,
+      // phone, avatar) and should never sit in plaintext localStorage.
+      // Once a real backend exists, session state belongs in an httpOnly
+      // cookie, and this store should be re-hydrated by revalidating with
+      // the server on load rather than trusting a cached client value.
+      partialize: () => ({}),
+    }
   )
 );

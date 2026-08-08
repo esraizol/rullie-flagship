@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
-import { ScrollReveal, StaggerChildren, SectionLabel } from '@/components/ui';
+import { ScrollReveal, StaggerChildren, SectionLabel, ParallaxImage } from '@/components/ui';
 import { JournalPreviewCard, AIStudioFeature } from '@/components/home';
 import { ProductCard } from '@/components/product';
 import { featuredProducts, crossSellProducts, journalPreview } from '@/lib/mock-data';
@@ -83,9 +83,14 @@ export default function HomePage() {
           <SectionLabel>{tSections('latestChapter', { fallback: 'The Latest Chapter' })}</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8 mt-12 items-center">
             <div className="md:col-span-7">
-              <div className="aspect-[3/4] w-full bg-gradient-to-br from-stone-200 to-stone-400 rounded-sm overflow-hidden relative group">
-                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-700" />
-              </div>
+              <ParallaxImage
+                src="/images/placeholder-editorial.jpg"
+                alt=""
+                width={1200}
+                height={1600}
+                priority
+                containerClassName="aspect-[3/4] w-full rounded-sm"
+              />
             </div>
             <div className="md:col-span-5 flex flex-col items-start justify-center md:pl-10">
               <h2 className="font-heading text-display leading-tight mb-6 whitespace-pre-line">

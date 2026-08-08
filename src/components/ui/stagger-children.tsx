@@ -42,7 +42,7 @@ export function StaggerChildren({
           transition={{
             duration,
             delay: index * staggerDelay,
-            ease: EASINGS.outExpo as unknown as number[],
+            ease: EASINGS.outExpo,
           }}
         >
           {child}

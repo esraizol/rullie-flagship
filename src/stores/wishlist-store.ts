@@ -22,7 +22,11 @@ export const useWishlistStore = create<WishlistState>()(
         items: state.items.filter((id) => id !== productId),
       })),
       toggleItem: (productId) => {
-        get().items.includes(productId) ? get().removeItem(productId) : get().addItem(productId);
+        if (get().items.includes(productId)) {
+          get().removeItem(productId);
+        } else {
+          get().addItem(productId);
+        }
       },
       isInWishlist: (productId) => get().items.includes(productId),
       clearAll: () => set({ items: [] }),

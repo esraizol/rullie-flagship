@@ -43,7 +43,7 @@ export function ScrollReveal({
       className={cn(className)}
       initial={getInitial()}
       animate={isVisible ? { opacity: 1, x: 0, y: 0 } : getInitial()}
-      transition={{ duration, delay, ease: EASINGS.outExpo as unknown as number[] }}
+      transition={{ duration, delay, ease: EASINGS.outExpo }}
     >
       {children}
     </motion.div>
