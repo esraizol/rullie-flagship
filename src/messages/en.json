@@ -90,7 +90,10 @@
     "culture": "Culture",
     "news": "News",
     "publishedOn": "Published on {date}",
-    "by": "by {author}"
+    "by": "by {author}",
+    "design": "Design",
+    "sustainability": "Sustainability",
+    "read": "Read"
   },
   "search": {
     "placeholder": "Search products, collections, stories…",
@@ -149,7 +152,8 @@
     },
     "success": "Welcome to the RULLIÉ world.",
     "error": "Something went wrong. Please try again.",
-    "privacy": "We respect your privacy. Unsubscribe anytime."
+    "privacy": "We respect your privacy. Unsubscribe anytime.",
+    "disclaimer": "By subscribing, you agree to our Privacy Policy and consent to receive updates from our company."
   },
   "contact": {
     "title": "Get in Touch",
@@ -194,7 +198,12 @@
       "tryOn": "Virtual Try-On",
       "outfitBuilder": "Outfit Builder",
       "wardrobe": "Digital Wardrobe",
-      "colorAnalysis": "Color Analysis"
+      "colorAnalysis": "Color Analysis",
+      "tryOnDescription": "See how pieces fit before you buy.",
+      "customFit": "Custom Fit",
+      "customFitDescription": "Tailored measurements via scanning.",
+      "styleAdvisor": "Style Advisor",
+      "styleAdvisorDescription": "AI-driven wardrobe recommendations."
     },
     "waitlist": "Join the Waitlist",
     "waitlistPlaceholder": "Your email address",
@@ -233,5 +242,19 @@
     "nextSlide": "Next slide",
     "playVideo": "Play video",
     "pauseVideo": "Pause video"
+  },
+  "home": {
+    "nocturneTitle": "Nocturne\nCollection",
+    "nocturneDescription": "A symphony of shadows and light. Explore our new line of silk and statement pieces designed for the modern muse.",
+    "manifestoQuote": "We don't follow trends.\nWe create signatures.",
+    "manifestoBody": "Every RULLIÉ piece is crafted with meticulous attention to detail, blending heritage techniques with avant-garde aesthetics to offer a wardrobe that transcends seasons.",
+    "editorialTitle": "The Art of Adornment",
+    "editorialBody": "Discover the inspiration behind our latest accessories line. A journey through architectural forms and fluid silk drapery.",
+    "lookbookLook": "Look {number}",
+    "viewAllAccents": "View All Accents",
+    "stylingGuideTitle": "How to wear a\nRULLIÉ silk scarf",
+    "stylingGuideBody": "From classic neck ties to modern top styles, discover versatile ways to incorporate our signature silks into your everyday repertoire.",
+    "readGuide": "Read Guide",
+    "followUs": "Follow Us"
   }
 }

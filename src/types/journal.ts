@@ -1,6 +1,14 @@
 import type { SEOMetadata } from './seo';
 
-export type JournalCategory = 'styling' | 'behind-the-scenes' | 'editorial' | 'fashion' | 'culture' | 'news';
+export type JournalCategory =
+  | 'styling'
+  | 'behind-the-scenes'
+  | 'editorial'
+  | 'fashion'
+  | 'culture'
+  | 'news'
+  | 'design'
+  | 'sustainability';
 
 export interface JournalArticle {
   id: string;

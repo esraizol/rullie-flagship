@@ -90,7 +90,10 @@
     "culture": "Kültür",
     "news": "Haberler",
     "publishedOn": "{date} tarihinde yayınlandı",
-    "by": "{author} tarafından"
+    "by": "{author} tarafından",
+    "design": "Tasarım",
+    "sustainability": "Sürdürülebilirlik",
+    "read": "Oku"
   },
   "search": {
     "placeholder": "Ürün, koleksiyon, hikaye ara…",
@@ -149,7 +152,8 @@
     },
     "success": "RULLIÉ dünyasına hoş geldin.",
     "error": "Bir şeyler yanlış gitti. Lütfen tekrar dene.",
-    "privacy": "Gizliliğinize saygı duyuyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz."
+    "privacy": "Gizliliğinize saygı duyuyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.",
+    "disclaimer": "Abone olarak Gizlilik Politikamızı kabul etmiş ve şirketimizden güncellemeler almayı onaylamış olursunuz."
   },
   "contact": {
     "title": "İletişime Geç",
@@ -194,7 +198,12 @@
       "tryOn": "Sanal Deneme",
       "outfitBuilder": "Kombin Yaratıcı",
       "wardrobe": "Dijital Gardırop",
-      "colorAnalysis": "Renk Analizi"
+      "colorAnalysis": "Renk Analizi",
+      "tryOnDescription": "Satın almadan önce parçaların üzerinizde nasıl durduğunu görün.",
+      "customFit": "Kişiye Özel Kesim",
+      "customFitDescription": "Tarama ile alınan ölçülere göre kişiselleştirme.",
+      "styleAdvisor": "Stil Danışmanı",
+      "styleAdvisorDescription": "Yapay zeka destekli gardırop önerileri."
     },
     "waitlist": "Bekleme Listesine Katıl",
     "waitlistPlaceholder": "E-posta adresiniz",
@@ -233,5 +242,19 @@
     "nextSlide": "Sonraki slayt",
     "playVideo": "Videoyu oynat",
     "pauseVideo": "Videoyu duraklat"
+  },
+  "home": {
+    "nocturneTitle": "Nocturne\nKoleksiyonu",
+    "nocturneDescription": "Gölgelerin ve ışığın senfonisi. Modern müzemiz için tasarlanmış yeni ipek ve iddialı parçalar koleksiyonumuzu keşfedin.",
+    "manifestoQuote": "Trendleri takip etmeyiz.\nİmza yaratırız.",
+    "manifestoBody": "Her RULLIÉ parçası, geleneksel teknikleri avangard estetikle harmanlayarak mevsimleri aşan bir gardırop sunmak amacıyla titiz bir özenle üretilir.",
+    "editorialTitle": "Süslenme Sanatı",
+    "editorialBody": "En yeni aksesuar hattımızın ardındaki ilhamı keşfedin. Mimari formlar ve akışkan ipek drapeler arasında bir yolculuk.",
+    "lookbookLook": "Görünüm {number}",
+    "viewAllAccents": "Tüm Aksanları Gör",
+    "stylingGuideTitle": "Bir RULLIÉ ipek eşarp\nnasıl kullanılır",
+    "stylingGuideBody": "Klasik boyun bağlarından modern üst stillere, imza ipeklerimizi günlük repertuvarınıza dahil etmenin çok yönlü yollarını keşfedin.",
+    "readGuide": "Rehberi Oku",
+    "followUs": "Bizi Takip Edin"
   }
 }

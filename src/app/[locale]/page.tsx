@@ -1,16 +1,24 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { ScrollReveal, StaggerChildren, SectionLabel } from '@/components/ui';
+import { JournalPreviewCard, AIStudioFeature } from '@/components/home';
+import { featuredProducts, crossSellProducts, journalPreview } from '@/lib/mock-data';
+import { formatPrice } from '@/lib/utils';
 
 export default function HomePage() {
+  const locale = useLocale();
   const tHero = useTranslations('hero');
   const tSections = useTranslations('sections');
   const tProduct = useTranslations('product');
+  const tCollection = useTranslations('collection');
+  const tJournal = useTranslations('journal');
   const tNewsletter = useTranslations('newsletter');
   const tAiStudio = useTranslations('aiStudio');
+  const tHome = useTranslations('home');
+  const tCommon = useTranslations('common');
 
   return (
     <main className="min-h-screen bg-background text-foreground overflow-hidden font-body">
@@ -79,15 +87,17 @@ export default function HomePage() {
               </div>
             </div>
             <div className="md:col-span-5 flex flex-col items-start justify-center md:pl-10">
-              <h2 className="font-heading text-display leading-tight mb-6">Nocturne<br />Collection</h2>
+              <h2 className="font-heading text-display leading-tight mb-6 whitespace-pre-line">
+                {tHome('nocturneTitle')}
+              </h2>
               <p className="text-muted text-lg font-light leading-relaxed mb-10 max-w-md">
-                A symphony of shadows and light. Explore our new line of silk and statement pieces designed for the modern muse.
+                {tHome('nocturneDescription')}
               </p>
               <Link 
                 href="/collections/nocturne" 
                 className="group flex items-center gap-4 border-b border-foreground pb-2 text-sm tracking-widest uppercase hover:text-muted transition-colors duration-300"
               >
-                <span>{tProduct('exploreAll', { fallback: 'Explore Collection' })}</span>
+                <span>{tCollection('discoverCollection')}</span>
                 <span className="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
               </Link>
             </div>
@@ -101,14 +111,14 @@ export default function HomePage() {
           <SectionLabel>{tSections('featuredProducts', { fallback: 'Featured Pieces' })}</SectionLabel>
           
           <StaggerChildren className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12">
-            {[1, 2, 3, 4].map((item) => (
-              <Link href={`/product/${item}`} key={item} className="group block">
+            {featuredProducts.map((product) => (
+              <Link href={`/product/${product.slug}`} key={product.id} className="group block">
                 <div className="aspect-[3/4] w-full bg-gradient-to-tr from-stone-100 to-stone-300 rounded-sm overflow-hidden mb-4 relative">
                   <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <div className="flex flex-col items-center text-center">
-                  <h3 className="text-xs tracking-widest uppercase font-medium mb-1">Silk Scarf N°{item}</h3>
-                  <span className="text-sm text-muted">$240</span>
+                  <h3 className="text-xs tracking-widest uppercase font-medium mb-1">{product.name}</h3>
+                  <span className="text-sm text-muted">{formatPrice(product.price, product.currency, locale)}</span>
                 </div>
               </Link>
             ))}
@@ -129,14 +139,13 @@ export default function HomePage() {
       <section className="py-32 md:py-48 px-4 bg-cream text-center flex flex-col items-center justify-center">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto flex flex-col items-center">
-            <h2 className="font-heading text-3xl md:text-5xl leading-tight text-foreground mb-8 text-balance">
-              "We don't follow trends.<br className="hidden md:block"/> We create signatures."
+            <SectionLabel className="mb-8">{tSections('manifesto', { fallback: 'Our Philosophy' })}</SectionLabel>
+            <h2 className="font-heading text-3xl md:text-5xl leading-tight text-foreground mb-8 text-balance whitespace-pre-line">
+              &ldquo;{tHome('manifestoQuote')}&rdquo;
             </h2>
             <div className="w-12 h-[1px] bg-foreground/20 mb-8" />
             <p className="text-muted text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-              Every RULLIÉ piece is crafted with meticulous attention to detail, 
-              blending heritage techniques with avant-garde aesthetics to offer 
-              a wardrobe that transcends seasons.
+              {tHome('manifestoBody')}
             </p>
           </div>
         </ScrollReveal>
@@ -151,16 +160,16 @@ export default function HomePage() {
           </div>
           <div className="w-full md:w-[30%] bg-foreground text-background flex flex-col justify-center px-8 py-20 md:p-16">
             <ScrollReveal>
-              <h3 className="font-heading text-3xl mb-6">The Art of Adornment</h3>
+              <SectionLabel className="mb-6 text-background/60">{tSections('editorial', { fallback: 'Editorial' })}</SectionLabel>
+              <h3 className="font-heading text-3xl mb-6">{tHome('editorialTitle')}</h3>
               <p className="text-background/70 font-light leading-relaxed mb-10 text-sm md:text-base">
-                Discover the inspiration behind our latest accessories line. A journey through 
-                architectural forms and fluid silk drapery.
+                {tHome('editorialBody')}
               </p>
               <Link 
                 href="/journal/art-of-adornment" 
                 className="group inline-flex items-center gap-4 text-sm tracking-widest uppercase hover:text-white transition-colors duration-300"
               >
-                <span>Read the Story</span>
+                <span>{tJournal('readMore')}</span>
                 <span className="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
               </Link>
             </ScrollReveal>
@@ -176,7 +185,7 @@ export default function HomePage() {
             <div key={item} className="snap-center shrink-0 w-[85vw] md:w-[70vw] relative group">
               <div className="aspect-[3/4] w-full bg-gradient-to-tr from-stone-200 to-stone-400 rounded-sm overflow-hidden" />
               <div className="absolute bottom-6 left-6 text-white mix-blend-difference">
-                <p className="text-sm tracking-widest uppercase font-medium">Look {item}</p>
+                <p className="text-sm tracking-widest uppercase font-medium">{tHome('lookbookLook', { number: item })}</p>
               </div>
             </div>
           ))}
@@ -189,19 +198,19 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <h2 className="font-heading text-2xl md:text-3xl">{tSections('completeTheStory', { fallback: 'Complete the Story' })}</h2>
             <Link href="/shop" className="text-sm tracking-widest uppercase text-muted hover:text-foreground mt-4 md:mt-0 transition-colors">
-              View All Accents
+              {tHome('viewAllAccents')}
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[1, 2, 3].map((item) => (
-              <Link href={`/product/accent-${item}`} key={item} className="group flex flex-col">
+            {crossSellProducts.map((product) => (
+              <Link href={`/product/${product.slug}`} key={product.id} className="group flex flex-col">
                 <div className="aspect-square w-full bg-gradient-to-br from-stone-100 to-stone-200 mb-6 rounded-sm" />
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-sm uppercase tracking-wider mb-1">Signature Belt</h3>
-                    <p className="text-xs text-muted">Noir / Gold</p>
+                    <h3 className="text-sm uppercase tracking-wider mb-1">{product.name}</h3>
+                    <p className="text-xs text-muted">{product.description}</p>
                   </div>
-                  <span className="text-sm">$180</span>
+                  <span className="text-sm">{formatPrice(product.price, product.currency, locale)}</span>
                 </div>
               </Link>
             ))}
@@ -215,18 +224,17 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <ScrollReveal className="order-2 md:order-1">
               <SectionLabel className="mb-8">{tSections('stylingGuide', { fallback: 'Styling Guide' })}</SectionLabel>
-              <h2 className="font-heading text-4xl md:text-5xl leading-tight mb-8">
-                How to wear a<br/>RULLIÉ silk scarf
+              <h2 className="font-heading text-4xl md:text-5xl leading-tight mb-8 whitespace-pre-line">
+                {tHome('stylingGuideTitle')}
               </h2>
               <p className="text-muted font-light leading-relaxed mb-10 max-w-md">
-                From classic neck ties to modern top styles, discover versatile ways to incorporate 
-                our signature silks into your everyday repertoire.
+                {tHome('stylingGuideBody')}
               </p>
               <Link 
-                href="/journal/styling" 
+                href="/journal/how-to-wear-a-silk-scarf" 
                 className="inline-block border border-foreground text-foreground px-8 py-4 text-sm tracking-widest uppercase hover:bg-foreground hover:text-background transition-all duration-500"
               >
-                Read Guide
+                {tHome('readGuide')}
               </Link>
             </ScrollReveal>
             <div className="order-1 md:order-2 aspect-[4/5] bg-gradient-to-bl from-stone-300 to-stone-500 rounded-sm" />
@@ -246,27 +254,21 @@ export default function HomePage() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-12">
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center mb-4">
-                <span className="text-lg">✨</span>
-              </div>
-              <h4 className="text-sm tracking-widest uppercase mb-2">Virtual Try-On</h4>
-              <p className="text-xs text-muted">See how pieces fit before you buy.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center mb-4">
-                <span className="text-lg">🧵</span>
-              </div>
-              <h4 className="text-sm tracking-widest uppercase mb-2">Custom Fit</h4>
-              <p className="text-xs text-muted">Tailored measurements via scanning.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center mb-4">
-                <span className="text-lg">🎨</span>
-              </div>
-              <h4 className="text-sm tracking-widest uppercase mb-2">Style Advisor</h4>
-              <p className="text-xs text-muted">AI-driven wardrobe recommendations.</p>
-            </div>
+            <AIStudioFeature
+              icon="✨"
+              title={tAiStudio('features.tryOn')}
+              description={tAiStudio('features.tryOnDescription')}
+            />
+            <AIStudioFeature
+              icon="🧵"
+              title={tAiStudio('features.customFit')}
+              description={tAiStudio('features.customFitDescription')}
+            />
+            <AIStudioFeature
+              icon="🎨"
+              title={tAiStudio('features.styleAdvisor')}
+              description={tAiStudio('features.styleAdvisorDescription')}
+            />
           </div>
 
           <form className="w-full max-w-md flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
@@ -298,7 +300,7 @@ export default function HomePage() {
       <section className="py-12 border-t border-border overflow-hidden">
         <div className="flex items-center justify-between px-4 md:px-8 mb-8 max-w-7xl mx-auto">
           <SectionLabel>{tSections('socialFeed', { fallback: '@rullié' })}</SectionLabel>
-          <a href="#" className="text-xs tracking-widest uppercase hover:text-muted transition-colors">Follow Us</a>
+          <a href="#" className="text-xs tracking-widest uppercase hover:text-muted transition-colors">{tHome('followUs')}</a>
         </div>
         <div className="flex w-full gap-2 px-2 overflow-x-auto hide-scrollbar">
           {[1, 2, 3, 4, 5, 6].map((item) => (
@@ -316,26 +318,12 @@ export default function HomePage() {
         <div className="flex justify-between items-end mb-12">
           <SectionLabel>{tSections('journal', { fallback: 'From the Journal' })}</SectionLabel>
           <Link href="/journal" className="text-sm tracking-widest uppercase hover:text-muted transition-colors hidden md:block">
-            View All
+            {tCommon('seeAll')}
           </Link>
         </div>
         <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {[
-            { tag: 'Design', title: 'The Making of Nocturne', time: '5 min read' },
-            { tag: 'Culture', title: 'Modern Architecture & Fashion', time: '4 min read' },
-            { tag: 'Sustainability', title: 'Our Promise to the Planet', time: '6 min read' }
-          ].map((article, i) => (
-            <Link href={`/journal/article-${i}`} key={i} className="group block">
-              <div className="aspect-[16/9] w-full bg-gradient-to-bl from-stone-200 to-stone-400 mb-6 overflow-hidden rounded-sm">
-                 <div className="w-full h-full bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
-              </div>
-              <p className="text-xs uppercase tracking-widest text-muted mb-3">{article.tag}</p>
-              <h3 className="font-heading text-xl mb-3 group-hover:text-muted transition-colors">{article.title}</h3>
-              <div className="flex items-center justify-between text-xs text-muted">
-                <span>{article.time}</span>
-                <span className="uppercase tracking-widest font-medium group-hover:text-foreground transition-colors">Read</span>
-              </div>
-            </Link>
+          {journalPreview.map((article) => (
+            <JournalPreviewCard key={article.id} article={article} href={`/journal/${article.slug}`} />
           ))}
         </StaggerChildren>
       </section>
@@ -360,13 +348,13 @@ export default function HomePage() {
           </form>
 
           <div className="flex flex-wrap justify-center gap-4 text-xs tracking-widest uppercase text-background/50 mb-12">
-            <span>• Early Access</span>
-            <span>• Exclusive Content</span>
-            <span>• Styling Insights</span>
+            <span>• {tNewsletter('benefits.earlyAccess')}</span>
+            <span>• {tNewsletter('benefits.exclusiveContent')}</span>
+            <span>• {tNewsletter('benefits.stylingInsights')}</span>
           </div>
 
           <p className="text-[10px] text-background/40 max-w-sm mx-auto">
-            By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+            {tNewsletter('disclaimer')}
           </p>
         </ScrollReveal>
       </section>
