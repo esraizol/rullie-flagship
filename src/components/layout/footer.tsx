@@ -60,7 +60,7 @@ export function Footer() {
             <h3 className="font-heading text-lg font-bold uppercase">{t('support')}</h3>
             <Link href="/faq" className="text-muted hover:text-background transition-colors">{t('faq')}</Link>
             <Link href="/shipping" className="text-muted hover:text-background transition-colors">{t('shipping')}</Link>
-            <Link href="/contact" className="text-muted hover:text-background transition-colors">{t('sizeGuide')}</Link>
+            <Link href="/size-guide" className="text-muted hover:text-background transition-colors">{t('sizeGuide')}</Link>
           </div>
 
           <div className="space-y-4 flex flex-col">
@@ -72,7 +72,7 @@ export function Footer() {
 
           <div className="space-y-4 flex flex-col">
             <h3 className="font-heading text-lg font-bold uppercase">{t('tagline')}</h3>
-            <form className="mt-2 flex flex-col gap-3">
+            <form className="mt-2 flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Email"
