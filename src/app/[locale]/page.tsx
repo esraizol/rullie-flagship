@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import { ScrollReveal, StaggerChildren, SectionLabel } from '@/components/ui';
 import { JournalPreviewCard, AIStudioFeature } from '@/components/home';
+import { ProductCard } from '@/components/product';
 import { featuredProducts, crossSellProducts, journalPreview } from '@/lib/mock-data';
 import { formatPrice } from '@/lib/utils';
 
@@ -112,15 +113,7 @@ export default function HomePage() {
           
           <StaggerChildren className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mt-12">
             {featuredProducts.map((product) => (
-              <Link href={`/product/${product.slug}`} key={product.id} className="group block">
-                <div className="aspect-[3/4] w-full bg-gradient-to-tr from-stone-100 to-stone-300 rounded-sm overflow-hidden mb-4 relative">
-                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-                <div className="flex flex-col items-center text-center">
-                  <h3 className="text-xs tracking-widest uppercase font-medium mb-1">{product.name}</h3>
-                  <span className="text-sm text-muted">{formatPrice(product.price, product.currency, locale)}</span>
-                </div>
-              </Link>
+              <ProductCard key={product.id} product={product} />
             ))}
           </StaggerChildren>
 
