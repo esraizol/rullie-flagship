@@ -69,7 +69,8 @@
     "scarves": "İpek Eşarplar",
     "belts": "Kemerler",
     "brooches": "Broşlar",
-    "accessories": "Aksesuarlar"
+    "accessories": "Aksesuarlar",
+    "addToCart": "Sepete Ekle"
   },
   "collection": {
     "discoverCollection": "Koleksiyonu Keşfet",
@@ -331,5 +332,15 @@
   "lookbook": {
     "title": "Lookbook",
     "subtitle": "RULLIÉ'nin nasıl giyildiğine dair görsel bir kayıt."
+  },
+  "cart": {
+    "title": "Sepetiniz",
+    "empty": "Sepetiniz boş.",
+    "continueShopping": "Alışverişe Devam Et",
+    "subtotal": "Ara Toplam",
+    "remove": "Kaldır",
+    "checkout": "Ödemeye Geç",
+    "checkoutUnavailable": "Ödeme sistemi henüz bağlı değil — bize ulaşın, siparişinizi tamamlamanıza yardımcı olalım.",
+    "quantity": "Adet"
   }
 }

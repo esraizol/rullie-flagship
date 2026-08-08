@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { SectionLabel, StaggerChildren } from '@/components/ui';
-import { ProductCard, WishlistButton } from '@/components/product';
+import { ProductCard, WishlistButton, AddToCartButton } from '@/components/product';
 import { getProductBySlug, getRelatedProducts, products } from '@/lib/mock-data';
 import { formatPrice } from '@/lib/utils';
 
@@ -60,6 +60,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <p className="text-muted font-light leading-relaxed mb-10">{product.description}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <AddToCartButton productId={product.id} />
               {product.shopierUrl ? (
                 <a
                   href={product.shopierUrl}

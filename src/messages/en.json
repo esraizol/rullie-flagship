@@ -69,7 +69,8 @@
     "scarves": "Silk Scarves",
     "belts": "Belts",
     "brooches": "Brooches",
-    "accessories": "Accessories"
+    "accessories": "Accessories",
+    "addToCart": "Add to Cart"
   },
   "collection": {
     "discoverCollection": "Discover the Collection",
@@ -331,5 +332,15 @@
   "lookbook": {
     "title": "Lookbook",
     "subtitle": "A visual record of how RULLIÉ is worn."
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty.",
+    "continueShopping": "Continue Shopping",
+    "subtotal": "Subtotal",
+    "remove": "Remove",
+    "checkout": "Proceed to Checkout",
+    "checkoutUnavailable": "Checkout isn't connected yet — reach out and we'll help you complete your order.",
+    "quantity": "Quantity"
   }
 }

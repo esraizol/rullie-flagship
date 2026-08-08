@@ -5,7 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { spaceGrotesk, inter } from '@/lib/fonts';
-import { Navbar, MobileMenu, Footer, CustomCursor } from '@/components/layout';
+import { Navbar, MobileMenu, Footer, CustomCursor, CartDrawer } from '@/components/layout';
 import '../globals.css';
 
 export const metadata: Metadata = {
@@ -51,6 +51,7 @@ export default async function LocaleLayout({
           <CustomCursor />
           <Navbar />
           <MobileMenu />
+          <CartDrawer />
           <main id="main-content">
             {children}
           </main>

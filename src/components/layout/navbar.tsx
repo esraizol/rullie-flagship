@@ -5,7 +5,8 @@ import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { useScrollDirection } from '@/hooks/use-scroll-direction';
 import { useUIStore } from '@/stores/ui-store';
 import { useWishlistStore } from '@/stores/wishlist-store';
-import { Search, Heart, User, Menu, X } from 'lucide-react';
+import { useCartStore } from '@/stores/cart-store';
+import { Search, Heart, User, Menu, X, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { useParams } from 'next/navigation';
@@ -15,6 +16,8 @@ export function Navbar() {
   const { scrollDirection, isAtTop } = useScrollDirection();
   const { isMobileMenuOpen, toggleMobileMenu } = useUIStore();
   const wishlistCount = useWishlistStore((state) => state.items.length);
+  const cartCount = useCartStore((state) => state.itemCount());
+  const toggleCart = useCartStore((state) => state.toggleCart);
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
@@ -123,6 +126,15 @@ export function Navbar() {
               </span>
             )}
           </Link>
+
+          <button onClick={toggleCart} className="relative p-1 hover:text-muted transition-colors" aria-label={t('cart')}>
+            <ShoppingBag className="w-5 h-5 md:w-6 md:h-6" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 flex items-center justify-center w-4 h-4 bg-foreground text-background text-[10px] rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </button>
 
           <Link href="/account" className="p-1 hover:text-muted transition-colors" aria-label={t('account')}>
             <User className="w-5 h-5 md:w-6 md:h-6" />
