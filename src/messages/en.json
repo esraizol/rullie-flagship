@@ -256,5 +256,80 @@
     "stylingGuideBody": "From classic neck ties to modern top styles, discover versatile ways to incorporate our signature silks into your everyday repertoire.",
     "readGuide": "Read Guide",
     "followUs": "Follow Us"
+  },
+  "about": {
+    "eyebrow": "Our Story",
+    "title": "About RULLIÉ",
+    "intro": "RULLIÉ was founded on a simple belief: the pieces we choose to wear should outlast the seasons that inspired them.",
+    "storyTitle": "Where It Began",
+    "storyBody": "Every RULLIÉ piece begins the same way — with a question. Not “what's trending,” but “what will still feel right in ten years?” That question shapes every fabric we choose, every silhouette we cut, and every detail we refuse to compromise on.",
+    "valuesTitle": "What We Stand For",
+    "value1Title": "Craftsmanship",
+    "value1Body": "Each piece is made in small batches, with time given to the details that machines can't replicate.",
+    "value2Title": "Longevity",
+    "value2Body": "We design for a decade, not a season — fewer, better pieces, made to be worn rather than replaced.",
+    "value3Title": "Quiet Confidence",
+    "value3Body": "RULLIÉ is for those who don't need to shout to be noticed."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "statement": "To create pieces so considered, so quietly confident, that they become part of how you're remembered — not just what you wore.",
+    "body": "We exist to slow fashion down. Every RULLIÉ piece is designed to be kept, not replaced — built from materials and techniques chosen for how they age, not just how they arrive."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "statement": "A wardrobe built on fewer, better decisions.",
+    "body": "We imagine a future where personal style isn’t dictated by seasonal drops, but by pieces that grow more meaningful with time. RULLIÉ is our first step toward that future — one considered piece at a time."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before your first — or next — RULLIÉ piece.",
+    "categories": {
+      "ordersShipping": "Orders & Shipping",
+      "returnsExchanges": "Returns & Exchanges",
+      "materialsCare": "Materials & Care",
+      "sizingFit": "Sizing & Fit"
+    },
+    "items": [
+      {
+        "category": "ordersShipping",
+        "question": "How long does shipping take?",
+        "answer": "Orders are typically processed within 1–2 business days. Delivery times vary by destination and are confirmed at checkout."
+      },
+      {
+        "category": "ordersShipping",
+        "question": "Do you ship internationally?",
+        "answer": "We currently ship to a select group of countries, with more being added over time. Availability is shown at checkout."
+      },
+      {
+        "category": "returnsExchanges",
+        "question": "What is your return policy?",
+        "answer": "Unworn items in original condition can be returned within 14 days of delivery. Please reach out to our team to start a return."
+      },
+      {
+        "category": "returnsExchanges",
+        "question": "Can I exchange an item for a different size?",
+        "answer": "Yes — exchanges are handled the same way as returns. Contact us and we’ll guide you through it."
+      },
+      {
+        "category": "materialsCare",
+        "question": "How should I care for my silk pieces?",
+        "answer": "We recommend dry cleaning only, and storing pieces flat, away from direct sunlight and perfume or alcohol-based products."
+      },
+      {
+        "category": "materialsCare",
+        "question": "Where are RULLIÉ pieces made?",
+        "answer": "Each piece is made in small batches by artisans we work with directly, using materials chosen for how they age over time."
+      },
+      {
+        "category": "sizingFit",
+        "question": "How do I know what size to order?",
+        "answer": "Most RULLIÉ pieces — scarves, belts, and accessories — are designed to fit universally. Product pages note sizing where relevant."
+      }
+    ]
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "subtitle": "A visual record of how RULLIÉ is worn."
   }
 }

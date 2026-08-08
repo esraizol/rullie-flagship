@@ -256,5 +256,80 @@
     "stylingGuideBody": "Klasik boyun bağlarından modern üst stillere, imza ipeklerimizi günlük repertuvarınıza dahil etmenin çok yönlü yollarını keşfedin.",
     "readGuide": "Rehberi Oku",
     "followUs": "Bizi Takip Edin"
+  },
+  "about": {
+    "eyebrow": "Hikayemiz",
+    "title": "RULLIÉ Hakkında",
+    "intro": "RULLIÉ, basit bir inanışla kuruldu: giymeyi seçtiğimiz parçalar, onlara ilham veren mevsimlerden daha uzun ömürlü olmalı.",
+    "storyTitle": "Başlangıç",
+    "storyBody": "Her RULLIÉ parçası aynı şekilde başlar — bir soruyla. \"Trend ne?\" değil, \"on yıl sonra da doğru hissettirecek mi?\" Bu soru; seçtiğimiz her kumaşı, kestiğimiz her silueti ve asla taviz vermediğimiz her detayı şekillendirir.",
+    "valuesTitle": "Neyi Savunuyoruz",
+    "value1Title": "Zanaatkarlık",
+    "value1Body": "Her parça küçük partiler halinde, makinelerin taklit edemeyeceği detaylara zaman ayrılarak üretilir.",
+    "value2Title": "Kalıcılık",
+    "value2Body": "Bir mevsim için değil, on yıl için tasarlıyoruz — daha az ama daha iyi parçalar, değiştirilmek değil giyilmek üzere üretilir.",
+    "value3Title": "Sessiz Özgüven",
+    "value3Body": "RULLIÉ, fark edilmek için bağırmaya ihtiyaç duymayanlar için."
+  },
+  "mission": {
+    "title": "Misyonumuz",
+    "statement": "Öylesine özenle tasarlanmış, öylesine sessizce özgüvenli parçalar yaratmak ki, sadece ne giydiğinizin değil, nasıl hatırlandığınızın da bir parçası olsunlar.",
+    "body": "Var oluş amacımız modayı yavaşlatmak. Her RULLIÉ parçası, değiştirilmek için değil saklanmak için tasarlanır — nasıl geldiklerinden çok nasıl yıprandıklarına göre seçilmiş malzeme ve tekniklerle üretilir."
+  },
+  "vision": {
+    "title": "Vizyonumuz",
+    "statement": "Daha az ama daha doğru kararlarla kurulmuş bir gardırop.",
+    "body": "Kişisel stilin mevsimlik koleksiyonlarla değil, zamanla daha anlamlı hale gelen parçalarla şekillendiği bir geleceği hayal ediyoruz. RULLIÉ, o geleceğe attığımız ilk adım — her seferinde tek bir özenli parçayla."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "subtitle": "İlk — ya da bir sonraki — RULLIÉ parçanızdan önce bilmeniz gereken her şey.",
+    "categories": {
+      "ordersShipping": "Sipariş & Kargo",
+      "returnsExchanges": "İade & Değişim",
+      "materialsCare": "Malzeme & Bakım",
+      "sizingFit": "Beden & Uyum"
+    },
+    "items": [
+      {
+        "category": "ordersShipping",
+        "question": "Kargo ne kadar sürede geliyor?",
+        "answer": "Siparişler genellikle 1-2 iş günü içinde hazırlanır. Teslimat süresi hedef ülkeye göre değişir ve ödeme adımında onaylanır."
+      },
+      {
+        "category": "ordersShipping",
+        "question": "Yurt dışına kargo gönderiyor musunuz?",
+        "answer": "Şu anda seçili bir ülke grubuna kargo gönderiyoruz, bu liste zamanla genişliyor. Uygunluk ödeme adımında gösterilir."
+      },
+      {
+        "category": "returnsExchanges",
+        "question": "İade politikanız nedir?",
+        "answer": "Kullanılmamış, orijinal durumundaki ürünler teslimattan itibaren 14 gün içinde iade edilebilir. İade başlatmak için ekibimizle iletişime geçin."
+      },
+      {
+        "category": "returnsExchanges",
+        "question": "Ürünü farklı bir bedenle değiştirebilir miyim?",
+        "answer": "Evet — değişimler iadeyle aynı şekilde işleniyor. Bize ulaşın, süreçte size yol gösterelim."
+      },
+      {
+        "category": "materialsCare",
+        "question": "İpek parçalarıma nasıl bakmalıyım?",
+        "answer": "Sadece kuru temizleme öneriyoruz; parçaları düz şekilde, doğrudan güneş ışığından ve parfüm/alkol bazlı ürünlerden uzak saklayın."
+      },
+      {
+        "category": "materialsCare",
+        "question": "RULLIÉ parçaları nerede üretiliyor?",
+        "answer": "Her parça, doğrudan çalıştığımız zanaatkarlar tarafından küçük partiler halinde, zamanla nasıl yıprandığına göre seçilmiş malzemelerle üretilir."
+      },
+      {
+        "category": "sizingFit",
+        "question": "Hangi bedeni seçeceğimi nasıl anlarım?",
+        "answer": "Çoğu RULLIÉ parçası — eşarplar, kemerler ve aksesuarlar — evrensel uyum için tasarlanmıştır. İlgili olduğu durumlarda ürün sayfalarında beden bilgisi belirtilir."
+      }
+    ]
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "subtitle": "RULLIÉ'nin nasıl giyildiğine dair görsel bir kayıt."
   }
 }
